@@ -1,0 +1,62 @@
+[
+   {
+      "question":"Q1.What is the capital of Bangladesh ?",
+      "optionOne":"Chittagong",
+      "optionTwo":"Dhaka",
+      "correctanswer":"Dhaka"
+   },
+   {
+      "question":"Q2.What is the national fruit of Bangladesh ?",
+      "optionOne":"Jackfruit",
+      "optionTwo":"Mango",
+      "correctanswer":"Jackfruit"
+   },
+   {
+      "question":"Q3.What is swift ?",
+      "optionOne":"A Bird",
+      "optionTwo":"Software",
+      "correctanswer":"A Bird"
+   },
+   {
+      "question":"Q4.What is MAC OS ?",
+      "optionOne":"Linux",
+      "optionTwo":"OS",
+      "correctanswer":"OS"
+   },
+   {
+      "question":"Q5.How many fingers do we have ?",
+      "optionOne":"20",
+      "optionTwo":"10",
+      "correctanswer":"20"
+   },
+   {
+      "question":"Q6.What is skype ?",
+      "optionOne":"Social Media",
+      "optionTwo":"News Reader",
+      "correctanswer":"Social Media"
+   },
+   {
+      "question":"Q7.Who was Einstain ?",
+      "optionOne":"A Doctor",
+      "optionTwo":"A Scientist",
+      "correctanswer":"A Scientist"
+   },
+   {
+      "question":"Q8.How many faces a brick has ?",
+      "optionOne":"4",
+      "optionTwo":"6",
+      "correctanswer":"6"
+   },
+   {
+      "question":"Q9.Which one can travel faster ?",
+      "optionOne":"Light",
+      "optionTwo":"Sound",
+      "correctanswer":"Light"
+   },
+   {
+      "question":"Q10.What is the sign of USD ?",
+      "optionOne":"@",
+      "optionTwo":"$",
+      "correctanswer":"$"
+   }
+]
