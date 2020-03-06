@@ -8,11 +8,6 @@
 
 import UIKit
 
-protocol SelectedOptionDelegate {
-    
-    func selectedOption(option: String)
-}
-
 var selectedStates = SelectedStates()
 
 class TableViewCell: UITableViewCell {
@@ -39,7 +34,7 @@ class TableViewCell: UITableViewCell {
         
         button1.layer.borderWidth = 2
         button2.layer.borderWidth = 2
-        
+
         button1.layer.borderColor = CGColor(srgbRed: 255/255, green: 126/255, blue: 121/255, alpha: 1)
         button2.layer.borderColor = CGColor(srgbRed: 255/255, green: 126/255, blue: 121/255, alpha: 1)
         
@@ -70,8 +65,6 @@ class TableViewCell: UITableViewCell {
     
     @IBAction func button1Action(_ sender: UIButton) {
         
-        print("button 1 is pressed")
-        
         button1.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
         button1.setTitleColor(.white, for: .normal)
         
@@ -87,15 +80,10 @@ class TableViewCell: UITableViewCell {
             selectedStates.rows.append(indexPath.row)
             selectedStates.buttonTags.append(sender.tag)
         
-        print(selectedStates.rows)
-        print(selectedStates.buttonTags)
-        
     }
     
     
     @IBAction func button2Action(_ sender: UIButton) {
-        
-        print("button 2 is pressed")
         
         button2.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
         button2.setTitleColor(.white, for: .normal)
@@ -109,10 +97,8 @@ class TableViewCell: UITableViewCell {
         
         let indexPath: NSIndexPath = (self.superview! as! UITableView).indexPath(for: self)! as NSIndexPath
         
-            selectedStates.rows.append(indexPath.row)
-            selectedStates.buttonTags.append(sender.tag)
-        
-        print(selectedStates.rows)
-        print(selectedStates.buttonTags)
+        selectedStates.rows.append(indexPath.row)
+        selectedStates.buttonTags.append(sender.tag)
+    
     }
 }

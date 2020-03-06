@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0743832412512D00FD3A3D /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0743822412512D00FD3A3D /* Protocol.swift */; };
 		FF0EB0BF240EF12A00032888 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0EB0BE240EF12A00032888 /* Utility.swift */; };
 		FF528103240C2D8B000BF214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF528102240C2D8B000BF214 /* AppDelegate.swift */; };
 		FF528105240C2D8B000BF214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF528104240C2D8B000BF214 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF0743822412512D00FD3A3D /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		FF0EB0BE240EF12A00032888 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		FF5280FF240C2D8B000BF214 /* Qquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF528102240C2D8B000BF214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				FF528116240C2DEA000BF214 /* TableViewCell.swift */,
 				FF0EB0BE240EF12A00032888 /* Utility.swift */,
 				FF52811A240C4B64000BF214 /* Data.swift */,
+				FF0743822412512D00FD3A3D /* Protocol.swift */,
 				FF528118240C480A000BF214 /* data.json */,
 				FF528108240C2D8B000BF214 /* Main.storyboard */,
 				FF52810B240C2D8C000BF214 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 				FF528107240C2D8B000BF214 /* ViewController.swift in Sources */,
 				FF52811B240C4B64000BF214 /* Data.swift in Sources */,
 				FF0EB0BF240EF12A00032888 /* Utility.swift in Sources */,
+				FF0743832412512D00FD3A3D /* Protocol.swift in Sources */,
 				FF528117240C2DEA000BF214 /* TableViewCell.swift in Sources */,
 				FF528103240C2D8B000BF214 /* AppDelegate.swift in Sources */,
 				FF528105240C2D8B000BF214 /* SceneDelegate.swift in Sources */,
