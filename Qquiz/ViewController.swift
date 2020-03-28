@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         tableView.tableFooterView = UIView()
         
         getData()
+        
     }
     
     func getData() {
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         guard let json = try? JSONDecoder().decode([Data].self, from: jsonData) else { return }
         for i in 0...json.count - 1 {
             data.append(json[i])
+            
         }
     }
 }
@@ -55,10 +57,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, SelectedOp
                 scoreLabel.text = "Score: \(score)"
             }
         }
-        //print("score:", score)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
         return data.count
     }
@@ -77,32 +78,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, SelectedOp
             cell.correctAnswerLabel.text = "Correct Answer: \(self.data[indexPath.row].correctanswer!)"
             
             
-            if selectedStates.rows.contains(indexPath.row) {
-
-                if selectedStates.buttonTags[indexPath.row] == 0 {
-                    //button1
-                    cell.button1.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
-                    cell.button1.setTitleColor(.white, for: .normal)
-
-                    cell.button1.isUserInteractionEnabled = false
-                    cell.button2.isUserInteractionEnabled = false
-
-                    cell.correctAnswerLabel.isHidden = false
-                }
-
-                else {
-                    //button2
-                    cell.button2.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
-                    cell.button2.setTitleColor(.white, for: .normal)
-
-                    cell.button1.isUserInteractionEnabled = false
-                    cell.button2.isUserInteractionEnabled = false
-
-                    cell.correctAnswerLabel.isHidden = false
-                }
+            
+            if selectedStates.selectedRowsForButton1.contains(indexPath.row) {
+                
+                cell.button1.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
+                cell.button1.setTitleColor(.white, for: .normal)
+                
+                cell.button1.isUserInteractionEnabled = false
+                cell.button2.isUserInteractionEnabled = false
+                
+                cell.correctAnswerLabel.isHidden = false
             }
+            
+            if selectedStates.selectedRowsForButton2.contains(indexPath.row) {
+                
+                cell.button2.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
+                cell.button2.setTitleColor(.white, for: .normal)
+                
+                cell.button1.isUserInteractionEnabled = false
+                cell.button2.isUserInteractionEnabled = false
+                
+                cell.correctAnswerLabel.isHidden = false
+            }
+            
+            
+            cell.delegate = self
         }
-        cell.delegate = self
+        
         
         return cell
     }

@@ -11,7 +11,7 @@ import UIKit
 var selectedStates = SelectedStates()
 
 class TableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var button1: UIButton!
@@ -34,7 +34,7 @@ class TableViewCell: UITableViewCell {
         
         button1.layer.borderWidth = 2
         button2.layer.borderWidth = 2
-
+        
         button1.layer.borderColor = CGColor(srgbRed: 255/255, green: 126/255, blue: 121/255, alpha: 1)
         button2.layer.borderColor = CGColor(srgbRed: 255/255, green: 126/255, blue: 121/255, alpha: 1)
         
@@ -43,22 +43,22 @@ class TableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-
+        
         button1.isUserInteractionEnabled = true
         button2.isUserInteractionEnabled = true
-
+        
         correctAnswerLabel.isHidden = true
-
+        
         button1.backgroundColor = UIColor.white
         button2.backgroundColor = UIColor.white
-
+        
         button1.setTitleColor(UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1), for: .normal)
         button2.setTitleColor(UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1), for: .normal)
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -75,10 +75,10 @@ class TableViewCell: UITableViewCell {
         
         delegate?.selectedOption(option: "\(button1.titleLabel?.text ?? "nill")")
         
+        
         let indexPath :NSIndexPath = (self.superview! as! UITableView).indexPath(for: self)! as NSIndexPath
         
-            selectedStates.rows.append(indexPath.row)
-            selectedStates.buttonTags.append(sender.tag)
+        selectedStates.selectedRowsForButton1.append(indexPath.row)
         
     }
     
@@ -97,8 +97,7 @@ class TableViewCell: UITableViewCell {
         
         let indexPath: NSIndexPath = (self.superview! as! UITableView).indexPath(for: self)! as NSIndexPath
         
-        selectedStates.rows.append(indexPath.row)
-        selectedStates.buttonTags.append(sender.tag)
-    
+        selectedStates.selectedRowsForButton2.append(indexPath.row)
+        
     }
 }

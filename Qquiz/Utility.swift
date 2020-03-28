@@ -10,7 +10,7 @@ import UIKit
 
 struct SelectedStates {
     
-    var rows = [Int]()
-    var buttonTags = [Int]()
+    var selectedRowsForButton1 = [Int]()
+    var selectedRowsForButton2 = [Int]()
     
 }
