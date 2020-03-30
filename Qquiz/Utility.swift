@@ -13,4 +13,5 @@ struct SelectedStates {
     var selectedRowsForButton1 = [Int]()
     var selectedRowsForButton2 = [Int]()
     
+    var x = Int()
 }
