@@ -84,8 +84,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, SelectedOp
                 cell.button1.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
                 cell.button1.setTitleColor(.white, for: .normal)
                 
-                cell.button1.isUserInteractionEnabled = false
-                cell.button2.isUserInteractionEnabled = false
+                cell.userInteraction(isEnabled: false)
+                //cell.button1.isUserInteractionEnabled = false
+                //cell.button2.isUserInteractionEnabled = false
                 
                 cell.correctAnswerLabel.isHidden = false
             }
@@ -95,8 +96,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, SelectedOp
                 cell.button2.backgroundColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1)
                 cell.button2.setTitleColor(.white, for: .normal)
                 
-                cell.button1.isUserInteractionEnabled = false
-                cell.button2.isUserInteractionEnabled = false
+                cell.userInteraction(isEnabled: false)
+                //cell.button1.isUserInteractionEnabled = false
+                //cell.button2.isUserInteractionEnabled = false
                 
                 cell.correctAnswerLabel.isHidden = false
             }

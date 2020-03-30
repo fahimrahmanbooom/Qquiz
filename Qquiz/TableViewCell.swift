@@ -44,8 +44,7 @@ class TableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        button1.isUserInteractionEnabled = true
-        button2.isUserInteractionEnabled = true
+        userInteraction(isEnabled: true)
         
         correctAnswerLabel.isHidden = true
         
@@ -56,11 +55,11 @@ class TableViewCell: UITableViewCell {
         button2.setTitleColor(UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1), for: .normal)
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
     
     
     @IBAction func button1Action(_ sender: UIButton) {
@@ -73,7 +72,7 @@ class TableViewCell: UITableViewCell {
         
         correctAnswerLabel.isHidden = false
         
-        delegate?.selectedOption(option: "\(button1.titleLabel?.text ?? "nill")")
+        delegate?.selectedOption(option: String(button1.titleLabel?.text ?? ""))
         
         
         let indexPath :NSIndexPath = (self.superview! as! UITableView).indexPath(for: self)! as NSIndexPath
@@ -93,11 +92,18 @@ class TableViewCell: UITableViewCell {
         
         correctAnswerLabel.isHidden = false
         
-        delegate?.selectedOption(option: "\(button2.titleLabel?.text ?? "nill")")
+        delegate?.selectedOption(option: String(button2.titleLabel?.text ?? "nill"))
         
         let indexPath: NSIndexPath = (self.superview! as! UITableView).indexPath(for: self)! as NSIndexPath
         
         selectedStates.selectedRowsForButton2.append(indexPath.row)
+        
+    }
+    
+    func userInteraction(isEnabled: Bool) {
+        
+        button1.isUserInteractionEnabled = isEnabled
+        button2.isUserInteractionEnabled = isEnabled
         
     }
 }
